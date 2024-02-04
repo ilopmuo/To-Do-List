@@ -11,13 +11,21 @@
 </head>
 
 <body>
+    <!--Lo primero declaramos un contenedor para nuestra aplicación-->
     <div class="container">
         <div class="todo_app">
+            <!-- Título to do y un icono de lista  -->
             <h2>To-Do <img src="images/iconolista.png"> </h2>
+            <!-- En el siguiente div tenemos una fila la cual contiene un input para escribir
+            la tarea a hacer y un botón para añadirlas -->
             <div class="fila">
                 <input type="text" id="input_box" placeholder="Escribe aquí">
+                <!-- onclick="AddTask()" declara la función que se va a realizar cada vez que
+                pulsamos el botón -->
                 <button onclick="AddTask()">Add</button>
             </div>
+            <!-- Contenedor para la lista en la que se almacenarán las tareas
+            lo que está comentado abajo era para diseñar como se iban a ver las tareas -->
             <ul id="list_container">
                <!--  <li class="checked">Tarea 1</li>
                 <li>Tarea 2</li>

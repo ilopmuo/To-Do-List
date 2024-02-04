@@ -7,26 +7,30 @@
     box-sizing: border-box;
 }
 
+/* Estilo del contenedor, que es realmente el gradiente que tenemos por detrás del bloque
+del bolque to do */
 .container{
-    width: 100%;
-    min-height: 100vh;
+    width: 100%; /* Para que ocupe la pantalla entera */
+    min-height: 100vh; /*  Lo mismo que antes pero entorno a la altura */
     background: linear-gradient(135deg, #90aadf, #afa4b1);
     padding: 10px;
 }
 
 .todo_app{
-    width: 100%;
+    width: 100%; /* Anchura del contenedor to do */
     max-width: 540px;
     background: #fff;
+    /* Margins y padding del contenedor */
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
+    /* Con esto hacemos los bordes circulares */
     border-radius: 10px;
 }
 
 .todo_app h2{
     color: #002765;
     display: flex;
-    align-items: center;
+    align-items: center; /* Centra to do y el icono para que se vea mejor */
     margin-bottom: 20px;
 }
 
@@ -38,7 +42,7 @@
 .fila{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Centra los flex en este caso el input y el botón para que estén en el mismo eje */
     background: #b8b9bc;
     border-radius: 30px;
     padding-left: 20px;
@@ -46,6 +50,8 @@
 }
 
 input{
+    /* flex: 1 ayuda a determinar que el input va a ser el 
+    primer elemento de la estructura flex*/
     flex: 1;
     border: none;
     outline: none;
@@ -61,6 +67,8 @@ button{
     background: #ff5945;
     color: #fff;
     font-size: 16px;
+    /* Cursor pointer cambia la forma de las que se ve el ratón cuando lo
+    pasas por encima */
     cursor: pointer;
     border-radius: 40px;
 }
@@ -74,29 +82,35 @@ ul li{
     position: relative;
 }
 
+/* ul li::before ayuda a añadir un elmento antes de el contenido de la lista
+en este caso es el cuadrado al que hay que hacerle click */
 ul li::before{
     content: '';
     position: absolute;
-    height: 28px;
-    width: 28px;
+    height: 22px;
+    width: 22px;
     border-radius: 50%;
     background-image: url(images/unchecked.png);
     background-size: cover;
     background-position: center;
-    top: 12px;
+    top: 10px;
     left: 8px;
 
 }
 
+/* Cambia el estilo de la tarea cuando la cambiamos a checked */
 ul li.checked{
     color: #555;
     text-decoration: line-through;
 }
 
+/* Cambia el elemento que aparece antes de la tarea cuando la cambiamos a checked */
+
 ul li.checked::before{
     background-image: url(images/checked.png);
 }
 
+/* Utilizamos el elementos span para la x de eliminar la tarea  */
 ul li span{
     position: absolute;
     right: 0;
@@ -104,12 +118,12 @@ ul li span{
     width: 40px;
     height: 40px;
     font-size: 22px;
-    color: #555;
+    color: #6b3f3f;
     line-height: 40px;
     text-align: center;
     border-radius: 50%;
 }
-
+/* Cuando pasamos el ratón por encima */
 ul li span:hover{
     background: #acadaf;
 }
